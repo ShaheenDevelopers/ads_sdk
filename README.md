@@ -17,7 +17,8 @@
   > Step 2. Add the dependency
  ```gradle
   dependencies {
-	        implementation 'com.github.ShaheenDevelopers:ads_sdk:1.0.0'
+  
+		 implementation 'com.github.ShaheenDevelopers:ads_sdk-without-ironsource:1.0.0'
 	}
 ```
 
