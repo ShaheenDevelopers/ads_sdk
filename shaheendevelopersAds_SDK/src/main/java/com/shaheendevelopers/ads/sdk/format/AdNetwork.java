@@ -27,7 +27,6 @@ import com.applovin.sdk.AppLovinMediationProvider;
 import com.applovin.sdk.AppLovinSdk;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.AdapterStatus;
-import com.ironsource.mediationsdk.IronSource;
 import com.shaheendevelopers.ads.sdk.R;
 import com.shaheendevelopers.ads.sdk.helper.AudienceNetworkInitializeHelper;
 import com.startapp.sdk.adsbase.StartAppAd;
@@ -146,20 +145,6 @@ public class AdNetwork {
                                     .setPositiveButton("DISMISS", null)
                                     .show();
                         }
-//                        InitializationConfiguration configuration = InitializationConfiguration.builder()
-//                                .setGameId(unityGameId)
-//                                .setInitializationListener(new IInitializationListener() {
-//                                    @Override
-//                                    public void onInitializationComplete() {
-//                                        Log.d(TAG, "Unity Mediation is successfully initialized. with ID : " + unityGameId);
-//                                    }
-//
-//                                    @Override
-//                                    public void onInitializationFailed(SdkInitializationError errorCode, String msg) {
-//                                        Log.d(TAG, "Unity Mediation Failed to Initialize : " + msg);
-//                                    }
-//                                }).build();
-//                        UnityMediation.initialize(configuration);
                         break;
                     case APPLOVIN:
                     case APPLOVIN_MAX:
@@ -180,9 +165,7 @@ public class AdNetwork {
 
                     case IRONSOURCE:
                     case FAN_BIDDING_IRONSOURCE:
-                        String advertisingId = IronSource.getAdvertiserId(activity);
-                        IronSource.setUserId(advertisingId);
-                        IronSource.init(activity, ironSourceAppKey);
+
                         break;
                 }
                 Log.d(TAG, "[" + adNetwork + "] is selected as Primary Ads");
@@ -247,9 +230,7 @@ public class AdNetwork {
 
                     case IRONSOURCE:
                     case FAN_BIDDING_IRONSOURCE:
-                        String advertisingId = IronSource.getAdvertiserId(activity);
-                        IronSource.setUserId(advertisingId);
-                        IronSource.init(activity, ironSourceAppKey);
+
                         break;
 
                     case NONE:
