@@ -18,7 +18,7 @@
  ```gradle
   dependencies {
   
-		 implementation 'com.github.ShaheenDevelopers:MultiAdsSdk:1.0.0'
+		 implementation 'com.github.ShaheenDevelopers:ads_sdk:1.0.0'
 	}
 ```
 
